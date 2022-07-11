@@ -4,7 +4,7 @@
 # - [ ] Optimize TabBar component for mobile
 */
 
-.form-container {
+.page-container {
     max-width: 1000px !important;
     margin: 0 auto !important;
 }

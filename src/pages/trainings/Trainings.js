@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Button, Container } from "react-bootstrap";
+import React, { Fragment, useState } from "react";
+import { Button, Container, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Filters from "../../components/filters/Filters";
 import FilterToggle from "../../components/filters/FilterToggle";
@@ -10,26 +10,29 @@ const Trainings = () => {
     const [activeFilter, setActiveFilter] = useState("");
 
     return (
-        <Container>
-            <div className="d-flex my-3 justify-content-between align-items-center">
-                <Link to="new">
-                    <Button variant="primary">
-                        <i class="bi bi-plus-lg"></i> New Training
-                    </Button>
-                </Link>
+        <Fragment>
+            <Navbar bg="light" >
+                <Container>
+                    <Link to="new">
+                        <Button variant="primary">
+                            <i class="bi bi-plus-lg"></i> New Training
+                        </Button>
+                    </Link>
 
-                <FilterToggle
-                    showFilters={showFilters}
-                    setShowFilters={setShowFilters}
-                />
-            </div>
+                    <FilterToggle
+                        showFilters={showFilters}
+                        setShowFilters={setShowFilters}
+                    />
+                </Container>
+            </Navbar>
+
             {showFilters && (
                 <Filters
                     activeFilter={activeFilter}
                     setActiveFilter={setActiveFilter}
                 />
             )}
-        </Container>
+        </Fragment>
     );
 };
 

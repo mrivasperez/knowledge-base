@@ -11,7 +11,7 @@ const Filters = ({ activeFilter, setActiveFilter }) => {
     };
 
     return (
-        <div className="d-block">
+        <div className="d-block page-container my-2">
             {options.map((filterOption) => {
                 if (filterOption === activeFilter) {
                     return (
@@ -19,6 +19,7 @@ const Filters = ({ activeFilter, setActiveFilter }) => {
                             onClick={(e) => filterHandler(filterOption)}
                             bg="dark"
                             text="light"
+                            className="mx-2"
                         >
                             {filterOption}
                         </Badge>
@@ -29,6 +30,7 @@ const Filters = ({ activeFilter, setActiveFilter }) => {
                             onClick={(e) => filterHandler(filterOption)}
                             bg="light"
                             text="dark"
+                            className="mx-1"
                         >
                             {filterOption}
                         </Badge>

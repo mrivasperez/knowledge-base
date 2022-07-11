@@ -11,7 +11,7 @@ import { LinkContainer } from "react-router-bootstrap";
 
 const NavBar = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
             <Container>
                 <Navbar.Brand href="#home">Knowledge Base</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
