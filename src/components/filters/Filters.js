@@ -11,7 +11,7 @@ const Filters = ({ activeFilter, setActiveFilter }) => {
     };
 
     return (
-        <>
+        <div className="d-block">
             {options.map((filterOption) => {
                 if (filterOption === activeFilter) {
                     return (
@@ -34,7 +34,7 @@ const Filters = ({ activeFilter, setActiveFilter }) => {
                         </Badge>
                     );
             })}
-        </>
+        </div>
     );
 };
 

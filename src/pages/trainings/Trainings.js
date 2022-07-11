@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Filters from "../../components/filters/Filters";
 import FilterToggle from "../../components/filters/FilterToggle";
 
@@ -11,20 +12,23 @@ const Trainings = () => {
     return (
         <Container>
             <div className="d-flex my-3 justify-content-between align-items-center">
-                <Button variant="primary">
-                    <i class="bi bi-plus-lg"></i> New Training
-                </Button>
-                {showFilters && (
-                    <Filters
-                        activeFilter={activeFilter}
-                        setActiveFilter={setActiveFilter}
-                    />
-                )}
+                <Link to="new">
+                    <Button variant="primary">
+                        <i class="bi bi-plus-lg"></i> New Training
+                    </Button>
+                </Link>
+
                 <FilterToggle
                     showFilters={showFilters}
                     setShowFilters={setShowFilters}
                 />
             </div>
+            {showFilters && (
+                <Filters
+                    activeFilter={activeFilter}
+                    setActiveFilter={setActiveFilter}
+                />
+            )}
         </Container>
     );
 };

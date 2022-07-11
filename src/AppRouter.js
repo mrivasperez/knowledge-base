@@ -7,6 +7,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import Home from "./pages/home/Home";
 import Trainings from "./pages/trainings/Trainings";
 import Resources from "./pages/resources/Resources";
+import NewTraining from "./pages/trainings/subpages/NewTraining";
 
 function AppRouter() {
     return (
@@ -15,6 +16,7 @@ function AppRouter() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/trainings" element={<Trainings />} />
+                <Route path="/trainings/new" element={<NewTraining />} />
                 <Route path="/resources" element={<Resources />} />
             </Routes>
         </BrowserRouter>

@@ -3,3 +3,8 @@
 # - [ ] Dyslexic Font
 # - [ ] Optimize TabBar component for mobile
 */
+
+.form-container {
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+}

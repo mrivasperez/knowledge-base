@@ -14,17 +14,18 @@ const Resources = () => {
                 <Button variant="primary">
                     <i class="bi bi-plus-lg"></i> New Resource
                 </Button>
-                {showFilters && (
-                    <Filters
-                        activeFilter={activeFilter}
-                        setActiveFilter={setActiveFilter}
-                    />
-                )}
+
                 <FilterToggle
                     showFilters={showFilters}
                     setShowFilters={setShowFilters}
                 />
             </div>
+            {showFilters && (
+                <Filters
+                    activeFilter={activeFilter}
+                    setActiveFilter={setActiveFilter}
+                />
+            )}
         </Container>
     );
 };
